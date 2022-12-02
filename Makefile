@@ -10,4 +10,7 @@ compile:
 #for option 1: use command "./run <YourInputFileName> <YourOutputFileName>" in command line
 #for option 2: use command "./run" in command line
 
-
+#delete the generated input and output files
+clean:
+	find -type f -name 'input*' -delete
+	find -type f -name 'output*' -delete

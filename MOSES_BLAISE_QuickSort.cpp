@@ -3,7 +3,8 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
-#include "/Users/blaisemoses/Desktop/CSCE350Project_MOSES_BLAISE/MOSES_BLAISE_InputFileGenerator.cpp"
+#include <iomanip>
+#include "MOSES_BLAISE_InputFileGenerator.cpp"
 using namespace std;
 
 int partition(vector<float> &vals , int start, int end){
