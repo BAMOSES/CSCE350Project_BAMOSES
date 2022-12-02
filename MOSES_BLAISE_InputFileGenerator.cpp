@@ -6,7 +6,7 @@
 #include <random>
 #include <sstream>
 using namespace std;
-
+//generates 75 input files , 25 each of size 10, 100 ,1000 inputs of random float values ranging -500 to 500
 void MakeInputFiles(int inputSize){
     stringstream ss;
     random_device random;
@@ -19,6 +19,7 @@ void MakeInputFiles(int inputSize){
         count = 26; 
      else
         count = 51;
+    // formats filenames for generation
     for( int i = count ; i < (count+25); i++){
        ss<< "input";
        ss << i;
@@ -32,6 +33,7 @@ void MakeInputFiles(int inputSize){
     }
     return;
 }
+//reads float values from an input file into a vector to be sorted
 void FileToArr(string filename, vector<float> &vals){
     fstream stream;
     stream.open(filename,fstream::in);
@@ -48,6 +50,7 @@ void FileToArr(string filename, vector<float> &vals){
     } 
     return;
 }
+//writes the contents of a vector to an output file.
 void makeOutputFile(vector<float> vals, string filename){
 
     fstream stream;
